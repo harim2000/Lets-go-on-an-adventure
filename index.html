@@ -2,68 +2,87 @@
     <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="application-name" content="Lets go on an Adventure">
         <meta name="author" content="Harim Sanchez">
-        <title>Hiking for beginners</title>
+        <meta name="description" content="Ever wanted to go on an adventure outdoors but don’t know where to begin? This web app assist and guide people as they begin their first hike and track their progress in their hiking adventures">
+        <meta name="keywords" content="hike, hiking, adventure, nature, outdoors, guide, progress">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- normalize.css for cross-browser stuff -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+        
+        <!-- misc imports -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+        <!-- My stylesheet -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!--icon-->
+        <link rel="icon" href="img/icon.png">
+
+        <title>Lets go on an adventure</title>
     </head>
     <body>
-        <header>
-            <h1>Hiking for beginners</h1>
+        <header class="container">
+            <a class="menu-button"><i class="fa fa-bars"></i></a>
+            <span></span>
+            <p class="button">Log in</p>
+            <a class="button" href="#sign-up">Sign Up</a>
         </header>
+
         <main>
-            <section>
-                <h2>Topic Overview</h2>
-                <p>
-                    This web app assist and guide people as they begin their first hike and track their progress in future hikes. 
-                    Hiking is a great way for one to connect with and enjoy nature around them. Most people, such as myself this summer, 
-                    have been wanting to get started with a trail so like anyone would do, we take to the internet and research 
-                    everything before going out. Most sites immediately tell you about all the gear you need to go through the hike: 
-                    backpacks with water packs, waterproof jackets, hiking boots and socks. After buying hundreds of dollars worth of 
-                    equipment and finally go to the trail you are met with the beginner’s trail that you chose that you finished in 2 hours. 
-                    All that equipment that you bought was unnecessary to the small trip that you made that day. 
-                </p>
-                <p>
-                    Most hiking apps out there tell you that the elevation is however many feet and however many miles long but that 
-                    doesn’t really inform a beginner about what they will need for that trail. A beginner might think that all that 
-                    equipment was crucial to the surviving out in the wilderness but really wasn’t. Most apps out there aren’t targeted 
-                    towards beginners and spill out a bunch of information that seems like Greek to someone who is just starting out. 
-                    I would like to make this app with beginners in mind and cater specifically out to them, but also have options for 
-                    hiking veterans. Through an account-based system this app could really provide the proper information to those who 
-                    need it, such as equipment people usually take on that specific trail, current weather conditions on the trail, and 
-                    other stats in terms that beginners could understand/visualize. 
-                </p>
-            </section>
-            <section>
-                <h2>Potential Applications</h2>
-                <ul>
-                    <li>
-                        Trail Information
-                        <ul><li>
-                            This page will show general information about a trail in terms that the user could understand according to their 
-                            experience. This page would show a map of the trail, gain/elevation, a description of the trail, usual equipment 
-                            necessary for the trail, and comments made by other hikers using the app. 
-                        </li></ul>
-                    </li>
-                    <li>
-                        Progress Tracker
-                        <ul><li>
-                            This page would track the progress made by the user according to the trails that they have been through. 
-                            The page could also award people in their accomplishments (like completing a trail, going x amount of miles, 
-                            climbing x amount of feet in elevation)
-                        </li></ul>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Resources</h2>
-                <ul>
-                    <li><a href="https://www.wta.org/go-hiking/hikes/heliotrope-ridge">Example to a current trail information site</a></li>
-                    <li><a href="https://www.rei.com/learn/expert-advice/hiking-for-beginners.html">Current hike information page for beginners</a></li>
-                    <li><a href="https://www.hikingproject.com/data">Data API that could be used in the site</a></li>
-                </ul>
-            </section>
+
+            <img class="icon img" src="img/icon.png" alt="Man climbing">
+            <h1>Lets go on an Adventure</h1>
+            <div class="bridge">
+                <a class="image-credit" href="https://unsplash.com/@timswaanphotography?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Tim Swaan"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;left:;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Tim Swaan</span></a>
+            </div>
+
+            
+
+            <p class="description">
+                Ever wanted to go on an adventure outdoors but don’t know where to begin? </br></br>
+                This web app assist and guide people as they begin their first hike and track their progress in future hikes. Hiking is a great way for one to connect with and enjoy nature around them. This web app will get you ready to go on your trail adventure, letting you know what equiptment people usually need for what trail.
+            </p>
+
+            <h2>Sign up</h2>
+
+            <p class="description">By creating an account, you can track your progress, in terms you can understand, as you go through the different trails, such as the distance you’ve traveled through nature and how far up youve climbed through the trails. </p>
+
+            <p id="sign-up"> Start Adventuring</p>
         </main>
+
         <footer>
 
+            <p class="copyright">©2018 Let’s go on an Adventure</p>
+            <div class="footer-buttons">
+                <p class="button">Terms</p>
+                <p class="button">Social Media</p>
+                <p class="button">About Us</p>
+            </div>
         </footer>
+
     </body>
     </html>
+
+    <!--
+
+        Image credits
+
+        Hiker with a large backpack
+        Jake Melara
+        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@jakemelara?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Jake Melara"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Jake Melara</span></a>
+
+        profile shot
+        Benjamin Parker
+        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@brokenlenscap?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Benjamin Parker"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Benjamin Parker</span></a>
+
+        Nature shot bridge
+        Tim Swann
+        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@timswaanphotography?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Tim Swaan"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Tim Swaan</span></a>
+
+
+
+    -->

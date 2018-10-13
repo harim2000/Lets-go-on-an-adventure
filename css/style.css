@@ -1,0 +1,124 @@
+*{box-sizing: border-box;}
+
+/* Header style*/
+header{
+    display:flex;
+    background-color: rgba(196, 196, 196, 0.3);
+}
+
+.fa-bars{
+    font-size: 25px;
+    margin: 15px;
+    color:white;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+span{
+    flex-grow: 1;
+}
+
+.button{
+    padding: 16px 40px;
+    border: 1px solid black;
+    background-color:#C4C4C4;
+    margin: 0;
+    font-family: "Kaushan Script", fantasy;
+    font-size: 20px;
+}
+
+
+/*Main style*/
+
+body{
+    background-color: #617C5F;
+    margin:0;
+}
+
+main{
+    margin-top: 10%;
+}
+
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2{
+    font-size: 64px;
+    font-family: "Kaushan Script", fantasy;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
+}
+
+h2{
+    font-size: 48px;
+}
+
+.bridge{
+    border: 2px solid black;
+    height: 300px;
+    background-image: url('../img/bridge-nature.jpg');
+    background-size: cover; 
+    background-position: center;
+}
+
+.image-credit{
+    background-color:black; 
+    color:white;
+    text-decoration:none;
+    padding:4px 6px;
+    font-family:-apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    line-height:1.2;
+    display:inline-block;
+    border-radius:3px;
+}
+
+.description{
+    color: white;
+    text-align: center;
+    margin: 36px 17px;
+    background-color: rgba(196, 196, 196, 0.3);
+    line-height: 33px;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#sign-up{
+    text-align: center;
+    margin: 0px 33%;
+    padding: 10px 0;
+    border: 1px solid black;
+    background-color:#C4C4C4;
+    font-family: "Kaushan Script", fantasy;
+    font-size: 20px;
+}
+
+
+
+/*Footer style*/
+footer{
+    background-color: rgba(196, 196, 196, 0.3);
+    margin-top: 2em;
+}
+
+.copyright{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+}
+
+.footer-buttons{
+    display:flex;
+    justify-content: center;
+}
+
+.footer-buttons .button{
+    flex-basis: 34%;
+    text-align: center;
+}

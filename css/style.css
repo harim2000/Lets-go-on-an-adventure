@@ -64,7 +64,7 @@ main{
 }
 
 h1, h2{
-    font-size: 64px;
+    font-size: 70px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     color: white;
@@ -76,8 +76,9 @@ h2{
 }
 
 p{
+    margin: 0 1em;
     color: white;
-    text-align: center;
+    text-align: left;
     background-color: rgba(196, 196, 196, 0.3);
     line-height: 33px;
     font-size: 20px;

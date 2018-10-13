@@ -1,0 +1,23 @@
+@import url("style.css");
+
+
+/*Main style*/
+
+.bridge{
+    border: 2px solid black;
+    height: 300px;
+    background-image: url('../img/bridge-nature.jpg');
+    background-size: cover; 
+    background-position: center;
+}
+
+.description{
+    margin: 36px 17px;
+    
+}
+
+#sign-up{
+    margin: 0px 33%;
+    padding: 10px 0;
+}
+

@@ -64,7 +64,7 @@ main{
 }
 
 h1, h2{
-    font-size: 70px;
+    font-size: 5em;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     color: white;
@@ -72,7 +72,7 @@ h1, h2{
 }
 
 h2{
-    font-size: 48px;
+    font-size: 3em;
 }
 
 p{
@@ -106,4 +106,42 @@ footer{
 .footer-buttons .button{
     flex-basis: 34%;
     text-align: center;
+}
+
+@media (min-width:700px){
+    body{
+        display:flex;
+        flex-wrap: wrap;
+        background-image: url("../img/jake-melara-30681-unsplash-bg-lg.jpg");
+        background-size: 100vw auto;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    /*Header Style*/
+    header{
+        background-color: transparent;
+        margin-bottom: 2em;
+    }
+    header .button{
+        display:none;
+    }
+    /*Main Style*/
+
+    main{
+        margin: 0 auto;
+    }
+
+    .icon, .bridge, p{
+        display:none;
+    }
+    /*Footer Style*/
+
+    footer{
+        flex-basis: 100vw;
+    }
+    
+
+
+
 }

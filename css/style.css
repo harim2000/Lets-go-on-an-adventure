@@ -1,27 +1,14 @@
+/* General Style*/
+
 *{box-sizing: border-box;}
+
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background-color: #617C5F;
     margin:0;
-}
-
-/* Header style*/
-.container{
-    display:flex;
-    flex-wrap: wrap;
-    background-color: rgba(196, 196, 196, 0.3);
-}
-
-.fa-bars{
-    font-size: 30px;
-    margin: 20px 0 0 20px;
-    color:white;
-    stroke: black;
-    stroke-width: 1px;
-}
-
-span{
-    flex-grow: 1;
 }
 
 a{
@@ -40,23 +27,78 @@ a{
     font-size: 20px;
 }
 
+.quick-links{
+    position: absolute;
+    top: -2000px;
+}
+
+
+/* Header style*/
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    background-color: rgba(196, 196, 196, 0.3);
+}
+
+    /*Menu Button*/
+.fa-bars{
+    font-size: 30px;
+    margin: 20px 0 0 20px;
+    color:white;
+    stroke: black;
+    stroke-width: 1px;
+    cursor: pointer;
+}
+
+span{
+    flex-grow: 1;
+}
+
+
+.navbar{
+    display:none;
+}
+
+input[type=checkbox]{
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+input[type=checkbox]#menu-toggle:checked~.navbar, #navbar:visited{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    top:50px;
+    left:0;
+    background-color: #556F44;
+    height: 100vh;
+
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-fill-mode: both;
+
+    /*Couldnt figure out the animation for the side
+    menu to go back to being hidden*/
+}
+
+
+.navbar .button{
+    margin:10px;
+}
+
+
+
 /*Main Style*/
 
 
-.bridge{
-    border: 2px solid black;
-    height: 300px;
-    background-image: url('../img/bridge-nature.jpg');
-    background-size: cover; 
-    background-position: center;
-}
 
 .description{
     margin: 36px 17px;
     
 }
 
-#sign-up{
+#sign-up-button{
     margin: 0px 33%;
     padding: 10px 0;
 }
@@ -65,35 +107,30 @@ main{
     margin-top: 10%;
 }
 
-.img{
+.img, .icon{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 80vw;
 }
-
-.image-credit{
-    background-color:black; 
-    color:white;
-    text-decoration:none;
-    padding:4px 6px;
-    font-family:-apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
-    font-size:12px;
-    font-weight:bold;
-    line-height:1.2;
-    display:inline-block;
-    border-radius:3px;
+.icon{ 
+    padding-top: 20px;
+    width:auto;
 }
 
 h1, h2{
-    font-size: 5em;
+    font-size: 4em;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     color: white;
     text-shadow: 2px 2px black;
 }
+h1{
+    flex-basis: 100%;
+}
 
 h2{
-    font-size: 3em;
+    font-size: 2em;
 }
 
 p{
@@ -104,6 +141,15 @@ p{
     line-height: 33px;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+}
+
+.col{
+    flex-basis: 50%;
 }
 
 /*Footer style*/
@@ -129,7 +175,7 @@ footer{
     text-align: center;
 }
 
-@media (min-width:700px){
+@media (min-width:768px){
     
     /*Header Style*/
 
@@ -145,10 +191,11 @@ footer{
         background-color: transparent;
         margin-bottom: 2em;
     }
-    header .button{
-        display:none;
-    }
 
+    input[type=checkbox]#menu-toggle:checked~.navbar{
+        height: calc(100vw/1.5 - 50px);
+    }
+    
     h1{
         flex-basis: 100%;
     }
@@ -159,7 +206,7 @@ footer{
         margin: 0 auto;
     }
 
-    .icon, .bridge{
+    .bridge{
         display:none;
     }
     /*Footer Style*/
@@ -168,7 +215,24 @@ footer{
         flex-basis: 100vw;
     }
     
+}
 
+@media (min-width: 992px){
+    .row{
+        flex-direction: row;
+    }
+}
 
-
+@keyframes slidein{
+    from {
+        position: absolute;
+        left:-300px
+      }
+    
+      to {
+          position: absolute;
+          left: 0;
+    }
+      
+    
 }

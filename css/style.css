@@ -184,7 +184,7 @@ footer{
         background-size: 100vw auto;
         background-repeat: no-repeat;
         background-attachment: scroll;
-        height: calc(100vw/1.5);
+        height: calc(100vw / 1.5);
     }
 
     .container{
@@ -193,7 +193,7 @@ footer{
     }
 
     input[type=checkbox]#menu-toggle:checked~.navbar{
-        height: calc(100vw/1.5 - 50px);
+        height: calc(100vw / 1.5 - 50px);
     }
     
     h1{

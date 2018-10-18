@@ -59,13 +59,14 @@ span{
     display:none;
 }
 
+
 input[type=checkbox]{
     position: absolute;
     top: -9999px;
     left: -9999px;
 }
 
-input[type=checkbox]#menu-toggle:checked~.navbar, #navbar:visited{
+input[type=checkbox]#menu-toggle:checked~.navbar{
     display:flex;
     flex-direction: column;
     position: absolute;
@@ -95,7 +96,6 @@ input[type=checkbox]#menu-toggle:checked~.navbar, #navbar:visited{
 
 .description{
     margin: 36px 17px;
-    
 }
 
 #sign-up-button{
@@ -118,7 +118,7 @@ main{
     width:auto;
 }
 
-h1, h2{
+h1, h2, h3{
     font-size: 4em;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -131,6 +131,9 @@ h1{
 
 h2{
     font-size: 2em;
+}
+h3{
+    font-size: 1.5em;
 }
 
 p{
@@ -200,14 +203,11 @@ footer{
         flex-basis: 100%;
     }
 
+    
     /*Main Style*/
 
     main{
         margin: 0 auto;
-    }
-
-    .bridge{
-        display:none;
     }
     /*Footer Style*/
 
@@ -221,6 +221,12 @@ footer{
     .row{
         flex-direction: row;
     }
+    h1{
+        font-size:6em;
+    }
+    .img{
+        width: 40vw;
+    }
 }
 
 @keyframes slidein{
@@ -233,6 +239,4 @@ footer{
           position: absolute;
           left: 0;
     }
-      
-    
 }

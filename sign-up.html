@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     
     <!-- misc imports -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -34,15 +34,15 @@
         </nav>
         <div class="container">
             <!--Goning to make it so that when you hover over/click on the hamburger icon in smaller screens it shows the rest of the menu-->
-            <label for="menu-toggle" class="hamburger-menu"><span class="fa fa-bars"></span></label>
-            <input type="checkbox" id="menu-toggle" aria-hidden="true">    
-            <span></span>
+            <span class="fa fa-bars show-menu"></span> 
             <nav class="navbar" id="navbar">
-                <a class="button" href="index.html" role="button">Home</a>
-                <a class="button" href="nearby-trails.html" role="button">Nearby Trails</a>
-                <a class="button" href="my-stats.html" role="button">My Stats</a>
-                <a class="button" href="about-us.html" role="button">About Us</a>
-                <a class="sign-up button" href="sign-up.html" role="button">Sign Up</a>
+                <i class="fa fa-arrow-left hide-menu"></i>
+
+                <a class="button" href="index.html">Home</a>
+                <a class="button" href="nearby-trails.html">Nearby Trails</a>
+                <a class="button" href="my-stats.html">My Stats</a>
+                <a class="button" href="about-us.html">About Us</a>
+                <a class="sign-up button" href="sign-up.html">Sign Up</a>
             </nav>
             <h1>Sign Up</h1>
         </div>
@@ -64,5 +64,8 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='js/index.js'></script>
 </body>
 </html>

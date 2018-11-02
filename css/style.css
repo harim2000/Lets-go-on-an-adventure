@@ -41,46 +41,31 @@ a{
 }
 
     /*Menu Button*/
-.fa-bars{
+.fa-bars, .fa-arrow-left{
     font-size: 30px;
-    margin: 20px 0 0 20px;
+    width: 30px;
+    margin: 20px 0 10px 20px;
     color:white;
     stroke: black;
-    stroke-width: 1px;
+    stroke-width: 2px;
     cursor: pointer;
 }
-
-span{
-    flex-grow: 1;
+.fa-bars{
+    margin:0;
+    position:fixed;
+    top:20px;
+    left:20px;
 }
+
 
 
 .navbar{
-    display:none;
-}
-
-
-input[type=checkbox]{
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-}
-
-input[type=checkbox]#menu-toggle:checked~.navbar{
     display:flex;
     flex-direction: column;
     position: absolute;
-    top:50px;
-    left:0;
+    left:-300px;
     background-color: #556F44;
     height: 100vh;
-
-    animation-duration: 2s;
-    animation-name: slidein;
-    animation-fill-mode: both;
-
-    /*Couldnt figure out the animation for the side
-    menu to go back to being hidden*/
 }
 
 
@@ -88,7 +73,16 @@ input[type=checkbox]#menu-toggle:checked~.navbar{
     margin:10px;
 }
 
-
+.navbarShown{
+    animation-duration: .5s;
+    animation-name: slidein;
+    left: 0;
+}
+.navbarHidden{
+    animation-duration: .5s;
+    animation-name: slideOut;
+    left: -300px;
+}
 
 /*Main Style*/
 
@@ -182,12 +176,19 @@ footer{
     
     /*Header Style*/
 
-    header{
+    body{
         background-image: url("../img/jake-melara-30681-unsplash-bg-lg.jpg");
         background-size: 100vw auto;
         background-repeat: no-repeat;
         background-attachment: scroll;
         height: calc(100vw / 1.5);
+    }
+    header{
+        margin-bottom: calc(100vw / 2);
+    }
+    header h1{
+        font-size:3em;
+        text-decoration: underline;
     }
 
     .container{
@@ -212,21 +213,53 @@ footer{
     /*Footer Style*/
 
     footer{
+        
         flex-basis: 100vw;
     }
     
 }
 
 @media (min-width: 992px){
+
+    body{
+        background-attachment: fixed;
+    }
+
     .row{
         flex-direction: row;
     }
-    h1{
-        font-size:6em;
+    header{
+        margin-bottom: calc(100vw / 3);
     }
+    header h1{
+        font-size: 4em;
+    }
+    
     .img{
         width: 40vw;
     }
+
+    main{
+        background-color: rgba(131, 131, 131, 0.8);
+        border-radius: 25px;
+        padding:20px;
+        margin: 20px;
+    }
+
+    main p{
+        background-color: rgba(97, 124, 95, .8);
+        border-radius: 10px;
+        padding: 20px;
+    }
+}
+@media (min-width: 1196px){
+    header{
+        margin-bottom: calc(100vw / 4);
+    }
+    header h1{
+        font-size:6em;
+    }
+
 }
 
 @keyframes slidein{
@@ -239,4 +272,14 @@ footer{
           position: absolute;
           left: 0;
     }
+}
+@keyframes slideOut{
+    from {
+        position: absolute;
+        left: 0;
+    } 
+    to {
+        position: absolute;
+        left:-300px
+    }  
 }

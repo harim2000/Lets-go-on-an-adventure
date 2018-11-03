@@ -186,6 +186,10 @@ footer{
     header{
         margin-bottom: calc(100vw / 2);
     }
+    
+    h1{
+        flex-basis: 100%;
+    }
     header h1{
         font-size:3em;
         text-decoration: underline;
@@ -200,9 +204,6 @@ footer{
         height: calc(100vw / 1.5 - 50px);
     }
     
-    h1{
-        flex-basis: 100%;
-    }
 
     
     /*Main Style*/

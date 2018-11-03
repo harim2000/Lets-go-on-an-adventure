@@ -10,19 +10,10 @@ $('.hide-menu').click(function(){
     $('.navbar').addClass('navbarHidden');
 });
 
-
-// $('.show-menu').click(function(){
-//     $('.navbar').css({
-//         'animation-duration': '.5s',
-//         'animation-name': 'slidein',
-//         'left': '0',
-//     });
-// });
-
-// $('.hide-menu').click(function(){
-//     $('navbar').css({
-//         'animation-duration':'.5s',
-//         'animation-name':'slideOut',
-//         'left':'-300px'
-//     });
-// });
+fetch('wta-parks-data.json')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+    });

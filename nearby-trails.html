@@ -10,7 +10,8 @@
 
     <!-- normalize.css for cross-browser stuff -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    
+    <link rel='stylesheet' href='css/simplePagination.css'>
+
     <!-- misc imports -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
@@ -50,7 +51,16 @@
     
     <main id="main-content">
         
-        
+        <div class="filters">
+            <span><input type="text" id="trail-search" placeholder="Search for trails.."></span>
+            <span><a class='button'>Search</a></span>
+        </div>
+        <div class="trails" id='trails'>
+            <div id="light-pagination" class="pagination light-theme simple-pagination"></div>
+            <ul class='list'>
+                <!--JS adds JSON data-->
+            </ul>
+        </div>
 
     </main>
 
@@ -65,7 +75,12 @@
     </footer>
 
     <!-- Scripts -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <script src='js/index.js'></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="js/jquery.simplePagination.js"></script>
+
+    <script src='js/sidebar-menu.js'></script>
+    <script src="js/data.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@ html{
 }
 
 body{
-    background-color: #617C5F;
+    background-color: rgb(97, 124, 95);
     margin:0;
 }
 
@@ -20,6 +20,7 @@ a{
     text-align: center;
     padding: 16px 40px;
     border: 1px solid black;
+    border-radius: 25px;
     background-color:#C4C4C4;
     color:black;
     margin: 0;
@@ -52,7 +53,7 @@ a{
 }
 .fa-bars{
     margin:0;
-    position:fixed;
+    position: absolute;
     top:20px;
     left:20px;
 }
@@ -149,6 +150,63 @@ p{
     flex-basis: 50%;
 }
 
+ul {
+    list-style-type: none;
+    padding:0;
+}
+
+.pagination li {
+    display:inline-block;
+    padding:5px;
+    margin: 20px auto;
+}
+
+div.trailCard{
+    background-color: rgba(196, 196, 196, 0.3);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 5px 5px rgba(63, 63, 63, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.trailIcon{
+    height: 150px;
+}
+
+.trailCard h2{
+    flex-basis: 100%;
+}
+
+.trailCard span{
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px black;
+    margin: 0 10px;
+}
+
+#trail-search{
+    font-size: 16px;
+    padding: 18px; 
+    border: 1px solid rgb(97, 97, 97);
+    margin: 0 30px;
+}
+
+.filters .button:hover{
+    cursor: pointer;
+}
+
+.trailCard.hideCard{
+    display:none;
+}
+.trailCard.showCard{
+    display:flex;
+}
+
+
 /*Footer style*/
 footer{
     background-color: rgba(196, 196, 196, 0.3);
@@ -184,7 +242,7 @@ footer{
         height: calc(100vw / 1.5);
     }
     header{
-        margin-bottom: calc(100vw / 2);
+        margin-bottom: calc(100vw / 1.75);
     }
     
     h1{
@@ -241,7 +299,7 @@ footer{
     }
 
     main{
-        background-color: rgba(131, 131, 131, 0.8);
+        background-color: rgba(131, 131, 131, 0.9);
         border-radius: 25px;
         padding:20px;
         margin: 20px;

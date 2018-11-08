@@ -42,9 +42,8 @@ a{
 }
 
     /*Menu Button*/
-.fa-bars, .fa-arrow-left{
+.fa-bars, .fa-arrow-left, .fa-spinner{
     font-size: 30px;
-    width: 30px;
     margin: 20px 0 10px 20px;
     color:white;
     stroke: black;
@@ -56,6 +55,10 @@ a{
     position: absolute;
     top:20px;
     left:20px;
+}
+.fa-spinner{
+    margin: 0 auto;
+    font-size: 70px;
 }
 
 
@@ -88,6 +91,32 @@ a{
 /*Main Style*/
 
 
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dd-hide{
+    display:none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dd-show{
+    display:flex;
+
+}
+
+
+.simple-pagination{
+    padding:0;
+    display:flex;
+    justify-content: center;
+}
 
 .description{
     margin: 36px 17px;
@@ -96,6 +125,7 @@ a{
 #sign-up-button{
     margin: 0px 33%;
     padding: 10px 0;
+    text-decoration: none;
 }
 
 main{
@@ -170,7 +200,15 @@ div.trailCard{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+
 }
+
+.bigTrailCard{
+    display: block;
+}
+
+#mapid { height: 180px; }
 
 .trailIcon{
     height: 150px;
@@ -199,12 +237,110 @@ div.trailCard{
     cursor: pointer;
 }
 
-.trailCard.hideCard{
+.hide, .trailCard.hideCard{
     display:none;
 }
-.trailCard.showCard{
+.trailCard.showCard, .show{
     display:flex;
 }
+
+.extra-info{
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+}
+
+
+.extra-info ul{
+    text-align: center;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.extra-info li{
+    background-color: rgba(97, 124, 95, .5);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    flex-basis: 33%;
+    color: white;
+    text-shadow: 1px 1px black;
+
+}
+
+.map-img{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80%;
+    border: 5px solid black;
+    max-width: 700px;
+    max-height: 700px;
+}
+
+div p{
+    text-align: center;
+    border-radius: 20px;
+}
+div p a{
+    color:white;
+    text-decoration: underline;
+}
+
+.filters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgba(196, 196, 196, 0.3);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+}
+.filters p{
+    background: none;
+}
+
+.dropdown{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:20px;
+}
+
+button.button, .sort.button{
+    font-size: 13px;
+}
+
+
+.sorting{
+    flex-grow: 2;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+.sorting p{
+    align-self: center;
+    line-height: 20px;
+    font-size: 15px;
+}
+.sorting div{
+    display:flex;
+    align-items: center;
+    margin:10px;
+}
+.sorting label{
+    color:white;
+    padding:5px;
+    font-size: 17px;
+    text-shadow: 1px 1px black;
+}
+
 
 
 /*Footer style*/
@@ -228,6 +364,7 @@ footer{
 .footer-buttons .button{
     flex-basis: 34%;
     text-align: center;
+    
 }
 
 @media (min-width:768px){
@@ -298,8 +435,12 @@ footer{
         width: 40vw;
     }
 
+    .filters, div.trailCard{
+        background-color:rgba(97, 124, 95, .5);
+    }
+
     main{
-        background-color: rgba(131, 131, 131, 0.9);
+        background-color: rgba(131, 131, 131, 0.95);
         border-radius: 25px;
         padding:20px;
         margin: 20px;
@@ -308,7 +449,10 @@ footer{
     main p{
         background-color: rgba(97, 124, 95, .8);
         border-radius: 10px;
-        padding: 20px;
+    }
+
+    .extra-info li{
+        background-color: rgba(196, 196, 196, .8);
     }
 }
 @media (min-width: 1196px){
